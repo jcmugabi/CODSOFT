@@ -13,6 +13,7 @@ body {
 }
 
 .container {
+    display: inline;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -24,54 +25,78 @@ header {
     padding: 20px 0;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header h1 {
+    margin: 0;
+    padding-left: 20px;
 }
 
-nav ul {
+h2 {
+    color: var(--blue);
+}
+
+hr {
+    border: 2px solid var(--yellow);
+    width: 90%;
+    margin: auto;
+}
+
+.nav-links {
     list-style: none;
-    display: flex;
+    padding: 0;
+    margin: 0;
+    float: right;
 }
 
-nav ul li {
+.nav-links li {
+    display: inline-block;
     margin-right: 20px;
 }
 
-nav ul li a {
+.nav-links li a {
     color: var(--white);
     text-decoration: none;
 }
 
+.nav-links li a.btn {
+    background-color: var(--yellow);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a.btn:hover {
+    background-color: #0056b3;
+}
+
 #main {
-    /* background-image: url('./images/image-2.jpg'); */
-    background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)), url(./images/image-2.jpg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)), url(./images/image-2.jpg);
     background-size: cover;
     background-position: center;
     padding: 100px 0;
+    text-align: center;
 }
+
 #main .container {
-    max-width: 400px;
+    max-width: 800px;
     margin: 0 auto;
-    padding-right: 600px;
-    text-align: left;
 }
+
 #main h1 {
     color: var(--white);
-    font-size: xxx-large;
+    font-size: 3em;
+    margin-top: 0;
 }
 
 #main h2 {
     color: var(--blue);
-    font-size: xx-large;
+    font-size: 2em;
 }
 
-hr {
-    border: 5px solid var(--blue); /* Adjust thickness and color as needed */
-    width: 86%;  /* Adjust length as needed */
-    margin-left: 10px; /* Optional: Center the line horizontally */
-  }
+.first{
+    border: 5px solid var(--blue);
+    width: 56%;
+    margin: auto;
+}
 
 #main p {
     color: var(--white);
@@ -92,7 +117,7 @@ hr {
 }
 
 section {
-    padding: 10px 0;
+    padding:10px 0;
     text-align: center;
 }
 
@@ -100,8 +125,41 @@ section h2 {
     margin-bottom: 20px;
 }
 
+/* Additional Styles for Services Section */
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25;
+    margin: 0;
+}
+
+.services-list li {
+    flex-basis: calc(33.33% - 25px); /* Adjust as needed */
+    margin-bottom: 25px;
+    background-color: var(--blue);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.services-list li h3 {
+    margin-top: 10;
+}
+
+.services-list li p {
+    margin-bottom: 55;
+}
+
+
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+}
+
 .benefit {
-    margin-bottom: 40px;
+    margin: 0 20px;
+    flex: 1;
 }
 
 .benefit img {
